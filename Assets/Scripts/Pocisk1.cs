@@ -15,7 +15,7 @@ public class Pocisk1 : MonoBehaviour
 
     void FixedUpdate()
     {
-        transform.position += Time.fixedDeltaTime * bulletSpeed * -transform.right;
+        transform.position += Time.fixedDeltaTime * bulletSpeed * transform.right;
     }
 
 }

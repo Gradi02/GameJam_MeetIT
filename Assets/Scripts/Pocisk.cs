@@ -6,12 +6,10 @@ public class Pocisk : MonoBehaviour
 {
     [SerializeField]
     public int bulletSpeed;
-    public GameObject statek;
-    private Vector3 kierunek;
 
     private void Start()
     {
-        kierunek = statek.transform.position;
+        Destroy(gameObject, 10);
     }
 
     void FixedUpdate()

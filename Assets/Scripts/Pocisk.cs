@@ -10,12 +10,11 @@ public class Pocisk : MonoBehaviour
 
     private void Start()
     {
-        Destroy(gameObject, 1.5f);
+        Destroy(gameObject, 4f);
     }
 
     void FixedUpdate()
     {
         transform.position += Time.fixedDeltaTime * bulletSpeed * transform.right;
-
     }
 }

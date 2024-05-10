@@ -11,6 +11,7 @@ public class EnemyMovement : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        speed = Random.Range(1, 2);
     }
     void FixedUpdate()
     {
@@ -18,5 +19,14 @@ public class EnemyMovement : MonoBehaviour
         {
             transform.position += transform.up * speed * Time.fixedDeltaTime;
         }
+        else if(Vector2.Distance(player.position, transform.position) < 0.2f)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public void RemoveFromList()
+    {
+        player.GetComponent<EnemySpawner>().enemies.Remove(gameObject);
     }
 }

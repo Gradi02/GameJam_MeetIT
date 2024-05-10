@@ -708,8 +708,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawningDistance: 10
   nextSpawnTime: 1
-  boostPrefab: []
-  boosts: []
+  boostPrefab:
+  - {fileID: 3050896113385584723, guid: e893ac82d5d1e7a43815350509b556a0, type: 3}
 --- !u!1 &1550464141
 GameObject:
   m_ObjectHideFlags: 0

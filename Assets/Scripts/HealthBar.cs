@@ -12,18 +12,9 @@ public class HealthBar : MonoBehaviour
         iloscSerc = serca.Length;
     }
 
-    private void Update()
+    public void AddHealth()
     {
-        if (Input.GetKeyUp(KeyCode.K)) 
-        {
-            iloscSerc--;
-
-            for (int i = iloscSerc; i < serca.Length; i++)
-            {
-                serca[i].gameObject.SetActive(false);
-            }
-        }
-        if (Input.GetKeyUp(KeyCode.L))
+        if (iloscSerc < serca.Length)
         {
             iloscSerc++;
 
@@ -34,7 +25,20 @@ public class HealthBar : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void DecresseHealth()
+    {
+        if (iloscSerc > 0)
+        {
+            iloscSerc--;
+
+            for (int i = iloscSerc; i < serca.Length; i++)
+            {
+                serca[i].gameObject.SetActive(false);
+            }
+        }
+    }
+
+    /*private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision != null)
         {
@@ -48,5 +52,5 @@ public class HealthBar : MonoBehaviour
                 }
             }
         }
-    }
+    }*/
 }

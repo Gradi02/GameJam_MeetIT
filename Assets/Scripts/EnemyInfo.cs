@@ -16,6 +16,7 @@ public class EnemyInfo : MonoBehaviour
                 if (enemy_color == collision.GetComponent<enemyType>().GetEnemyType())
                 {
                     hp -= 50;
+                    Destroy(collision.gameObject);
 
                     if (hp < 0)
                     {
@@ -23,7 +24,6 @@ public class EnemyInfo : MonoBehaviour
                         Destroy(gameObject);
                     }
                 }
-                Destroy(collision.gameObject);
             }
         }
     }

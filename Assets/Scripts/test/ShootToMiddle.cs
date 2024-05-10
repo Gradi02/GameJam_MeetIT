@@ -9,6 +9,7 @@ public class ShootToMiddle : MonoBehaviour
     private void Start()
     {
         StartCoroutine(Shooting());
+        
     }
 
     private IEnumerator Shooting()

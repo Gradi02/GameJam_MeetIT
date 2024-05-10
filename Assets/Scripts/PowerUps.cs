@@ -8,6 +8,8 @@ public class PowerUps : MonoBehaviour
     private Strzelaniev2 stl;
     private float timeToResetRate = 0;
     private bool act = false;
+    private float timeToResetDbl = 0;
+    private bool act2 = false;
 
     private void Awake()
     {
@@ -15,20 +17,23 @@ public class PowerUps : MonoBehaviour
         stl = GetComponent<Strzelaniev2>();
     }
 
+    [ContextMenu("t1")]
     public void MoreBullets()
     {
-
+        stl.SetBurst(true);
+        act2 = true;
+        timeToResetDbl = Time.time + 10;
     }
 
-    [ContextMenu("test")]
+    [ContextMenu("t2")]
     public void DoubleBulletRate()
     {
-        stl.SetRate(0.15f);
+        stl.SetRate(0.1f);
         act = true;
         timeToResetRate = Time.time + 10;
     }
 
-    public void GetHp()
+    public void AddHp()
     {
         healthBar.AddHealth();
     }
@@ -39,6 +44,12 @@ public class PowerUps : MonoBehaviour
         {
             stl.SetRate(0.3f);
             act = false;
+        }
+
+        if (Time.time > timeToResetDbl && act2)
+        {
+            stl.SetBurst(false);
+            act2 = false;
         }
     }
 }

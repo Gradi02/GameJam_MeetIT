@@ -8,4 +8,16 @@ public class BulletGoingMiddle : MonoBehaviour
     {
         LeanTween.move(this.gameObject, new Vector3(0, 0, 0), 3f);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision != null)
+        {
+            if (collision.CompareTag("bullet"))
+            {             
+                 Destroy(collision.gameObject);
+                 Destroy(gameObject);
+            }
+        }
+    }
 }

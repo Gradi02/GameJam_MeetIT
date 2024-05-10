@@ -13,7 +13,7 @@ public class EnemyRotateAround : MonoBehaviour
         int rotate = Random.Range(0, 360);
         this.gameObject.transform.Rotate(0, 0, +rotate);
         LeanTween.scale(Enemy, new Vector3(1, 1, 1), 0.5f).setEase(LeanTweenType.easeInOutSine);
-        LeanTween.rotateAround(RotateAnchor, new Vector3(0, 0, 1), 360f, 5f).setLoopCount(-1);
+        LeanTween.rotateAround(RotateAnchor, new Vector3(0, 0, 1), 360f, 10f).setLoopCount(-1);
         StartCoroutine(SpawnAround());
     }
 

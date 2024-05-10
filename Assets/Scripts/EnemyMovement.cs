@@ -22,6 +22,7 @@ public class EnemyMovement : MonoBehaviour
         else if(Vector2.Distance(player.position, transform.position) < 0.2f)
         {
             Destroy(gameObject);
+            player.GetComponent<HealthBar>().DecresseHealth();
         }
     }
 

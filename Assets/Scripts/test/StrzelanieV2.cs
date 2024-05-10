@@ -22,4 +22,9 @@ public class Strzelaniev2 : MonoBehaviour
             Instantiate(normalBullets ? projectilePrefab1 : projectilePrefab2, transform.position, transform.rotation);
         }
     }
+
+    public void SetRate(float n)
+    {
+        nextShotTime = n;
+    }
 }

@@ -10,11 +10,11 @@ public class Rotation : MonoBehaviour
     {
         if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
-            this.gameObject.transform.Rotate(0, 0, +rotate);
+            transform.Rotate(0, 0, +rotate);
         }
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            this.gameObject.transform.Rotate(0, 0, -rotate);
+            transform.Rotate(0, 0, -rotate);
         }
     }
 }

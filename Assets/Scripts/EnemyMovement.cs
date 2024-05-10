@@ -11,13 +11,17 @@ public class EnemyMovement : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        speed = Random.Range(2, 3);
+        speed = Random.Range(1, 2);
     }
     void FixedUpdate()
     {
         if(Vector2.Distance(player.position, transform.position) > endDistance)
         {
             transform.position += transform.up * speed * Time.fixedDeltaTime;
+        }
+        else if(Vector2.Distance(player.position, transform.position) < 0.2f)
+        {
+            Destroy(gameObject);
         }
     }
 

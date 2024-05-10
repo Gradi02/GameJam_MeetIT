@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyInfo : MonoBehaviour
 {
     private int hp = 100;
-
+    public string enemy_color;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -13,14 +13,17 @@ public class EnemyInfo : MonoBehaviour
         {
             if(collision.CompareTag("bullet"))
             {
-                hp -= 40;
-                Destroy(collision.gameObject);
-
-                if(hp < 0)
+                if (enemy_color == collision.GetComponent<enemyType>().GetEnemyType())
                 {
-                    GetComponent<EnemyMovement>().RemoveFromList();
-                    Destroy(gameObject);
+                    hp -= 50;
+
+                    if (hp < 0)
+                    {
+                        GetComponent<EnemyMovement>().RemoveFromList();
+                        Destroy(gameObject);
+                    }
                 }
+                Destroy(collision.gameObject);
             }
         }
     }

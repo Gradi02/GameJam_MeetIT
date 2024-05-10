@@ -133,8 +133,8 @@ GameObject:
   m_Component:
   - component: {fileID: 777283781}
   - component: {fileID: 777283780}
+  - component: {fileID: 777283786}
   - component: {fileID: 777283785}
-  - component: {fileID: 777283784}
   - component: {fileID: 777283783}
   - component: {fileID: 777283779}
   m_Layer: 0
@@ -157,7 +157,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawningDistance: 10
-  enemyPrefab: {fileID: 4400864230018387092, guid: 9df32af9f4663ac489760828d039da2b, type: 3}
+  nextSpawnTime: 3
+  enemyPrefab:
+  - {fileID: 4400864230018387092, guid: 9df32af9f4663ac489760828d039da2b, type: 3}
+  - {fileID: 4400864230018387092, guid: 0c2e0b22f83bc324bb8bef35ddbb2664, type: 3}
+  - {fileID: 4400864230018387092, guid: 129fed65eb358ae4a962a87914f2c319, type: 3}
+  - {fileID: 4400864230018387092, guid: 70eef8fd03d7aba4fbb6a044356f60ff, type: 3}
   enemies: []
 --- !u!212 &777283780
 SpriteRenderer:
@@ -238,7 +243,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8691a4ca09e4bc4fa434b1a16564280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &777283784
+--- !u!114 &777283785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777283778}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b40d1bbd09d899343a02cf81c20b5eb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectilePrefab: {fileID: 8656400887951297115, guid: 53cca0797e511ab42ae769b07bca6309, type: 3}
+--- !u!114 &777283786
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -251,19 +269,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 8656400887951297115, guid: 2a8476f3c734ddc4690b0e8a0aea1393, type: 3}
---- !u!114 &777283785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 777283778}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b40d1bbd09d899343a02cf81c20b5eb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 8656400887951297115, guid: 53cca0797e511ab42ae769b07bca6309, type: 3}
 --- !u!1 &1343822043
 GameObject:
   m_ObjectHideFlags: 0

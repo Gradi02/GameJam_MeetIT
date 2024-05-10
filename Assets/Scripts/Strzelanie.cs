@@ -11,7 +11,7 @@ public class Strzelanie : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(projectilePrefab, transform.position, Quaternion.identity);
+            Instantiate(projectilePrefab, transform.position, transform.rotation);
         }
     }
 }

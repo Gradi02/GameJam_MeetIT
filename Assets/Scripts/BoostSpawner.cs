@@ -10,7 +10,6 @@ public class BoostSpawner : MonoBehaviour
     [SerializeField] private float nextSpawnTime = 1;
 
     public GameObject[] boostPrefab;
-    public List<GameObject> boosts = new List<GameObject>();
 
     private void FixedUpdate()
     {
@@ -25,7 +24,6 @@ public class BoostSpawner : MonoBehaviour
             Vector2 directionToCenter = Vector2.zero - spawnPos;
             Quaternion rotationToCenter = Quaternion.LookRotation(Vector3.forward, directionToCenter);
             g.transform.rotation = rotationToCenter;
-            boosts.Add(g);
         }
     }
 }

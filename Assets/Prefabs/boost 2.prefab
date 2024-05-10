@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 2040314655237881092}
   - component: {fileID: 8223560891578973759}
   - component: {fileID: -8799147619723124330}
-  - component: {fileID: -1648316426472206534}
-  - component: {fileID: -8948753236801184321}
+  - component: {fileID: -5120396327196343072}
+  - component: {fileID: 7403337645004910747}
   m_Layer: 0
-  m_Name: boost
+  m_Name: boost 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -890497550, guid: 3a8b350fc82633b40bc24ba1ceb9bd6e, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 382210259, guid: 3a8b350fc82633b40bc24ba1ceb9bd6e, type: 3}
+  m_Color: {r: 0.8679245, g: 0.56648594, b: 0.08515483, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -100,8 +100,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  ptype: hp
---- !u!50 &-1648316426472206534
+  ptype: mblt
+--- !u!50 &-5120396327196343072
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -128,7 +128,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!61 &-8948753236801184321
+--- !u!61 &7403337645004910747
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

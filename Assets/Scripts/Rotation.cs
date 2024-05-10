@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Rotation : MonoBehaviour
 {
-    private float rotate = 0.25f;
+    private float rotate = 2f;
 
-    void Update()
+    void FixedUpdate()
     {
         if(Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {

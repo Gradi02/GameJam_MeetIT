@@ -134,7 +134,6 @@ GameObject:
   - component: {fileID: 777283781}
   - component: {fileID: 777283780}
   - component: {fileID: 777283786}
-  - component: {fileID: 777283785}
   - component: {fileID: 777283783}
   - component: {fileID: 777283779}
   m_Layer: 0
@@ -243,19 +242,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8691a4ca09e4bc4fa434b1a16564280, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &777283785
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 777283778}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b40d1bbd09d899343a02cf81c20b5eb1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 8656400887951297115, guid: 53cca0797e511ab42ae769b07bca6309, type: 3}
 --- !u!114 &777283786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,7 +254,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b40d1bbd09d899343a02cf81c20b5eb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectilePrefab: {fileID: 8656400887951297115, guid: 2a8476f3c734ddc4690b0e8a0aea1393, type: 3}
+  projectilePrefab1: {fileID: 8656400887951297115, guid: 53cca0797e511ab42ae769b07bca6309, type: 3}
+  projectilePrefab2: {fileID: 8656400887951297115, guid: 2a8476f3c734ddc4690b0e8a0aea1393, type: 3}
 --- !u!1 &1343822043
 GameObject:
   m_ObjectHideFlags: 0

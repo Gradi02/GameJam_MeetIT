@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class GameOver : MonoBehaviour
 {
     public GameObject img;
+    private ColorAdjustments clr;
     private void Start()
     {
         img.SetActive(false);
@@ -16,17 +17,16 @@ public class GameOver : MonoBehaviour
     [ContextMenu("t")]
     public void Gameover()
     {
-        EdgeGlowVolume eg = VolumeManager.instance.stack.GetComponent<EdgeGlowVolume>();
-        eg.Active = new BoolParameter(true, true);
+        Volume vol = Camera.main.GetComponent<Volume>();
+        ColorAdjustments tmp;
+        if (vol.profile.TryGet<ColorAdjustments>(out tmp))
+        {
+            clr = tmp;
+        }
+        clr.active = true;
         FindObjectOfType<AudioManager>().Stop("sound");
         FindObjectOfType<AudioManager>().Play("gameover");
-        StartCoroutine(end());
-    }
-
-    private IEnumerator end()
-    {
-        yield return new WaitForSeconds(2f);
         Time.timeScale = 0;
-        img.SetActive(true);
+
     }
 }

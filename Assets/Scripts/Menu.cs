@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -17,6 +16,7 @@ public class Menu : MonoBehaviour
 
     private void Start()
     {
+        FindObjectOfType<AudioManager>().Play("sound");
         StartCoroutine(ChangeColors());
     }
 
@@ -24,11 +24,13 @@ public class Menu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
+            //FindObjectOfType<AudioManager>().Play("ui");
             First = false;
             Second = true;
         }
         if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
+            //FindObjectOfType<AudioManager>().Play("ui");
             First = true;
             Second = false;
         }
@@ -36,10 +38,12 @@ public class Menu : MonoBehaviour
         {
             if (First)
             {
+                FindObjectOfType<AudioManager>().Play("ui");
                 SceneManager.LoadScene("Gradi");
             }
             if (Second)
             {
+                FindObjectOfType<AudioManager>().Play("ui");
                 Application.Quit();
             }
         }

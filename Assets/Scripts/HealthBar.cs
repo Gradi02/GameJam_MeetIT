@@ -12,12 +12,12 @@ public class HealthBar : MonoBehaviour
     private SpriteRenderer spr;
     Color c1 = new Color(255, 255, 255, 0.3f);
     Color c2 = new Color(255, 255, 255, 1f);
+    private ColorAdjustments clr;
 
     void Start()
     {
         iloscSerc = serca.Length;
         spr = GetComponent<SpriteRenderer>();
-        FindObjectOfType<AudioManager>().Play("sound");
     }
 
     public void AddHealth()
@@ -61,21 +61,22 @@ public class HealthBar : MonoBehaviour
 
     private IEnumerator hit()
     {
-        EdgeGlowVolume eg = VolumeManager.instance.stack.GetComponent<EdgeGlowVolume>();
+        Volume vol = Camera.main.GetComponent<Volume>();
+        ColorAdjustments tmp;
+        if (vol.profile.TryGet<ColorAdjustments>(out tmp))
+        {
+            clr = tmp;
+        }
+
         Time.timeScale = 0.01f;
         inv = true;
-        eg.Active = new BoolParameter(true, true);
+        clr.active = true;
         yield return new WaitForSeconds(0.01f);
-        eg.Active = new BoolParameter(false, true);
+        clr.active = false;
         Time.timeScale = 1;
         spr.color = c1;
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(2f);
         spr.color = c2;
-        yield return new WaitForSeconds(0.5f);
-        spr.color = c1;
-        yield return new WaitForSeconds(0.5f);
-        spr.color = c2;
-        yield return new WaitForSeconds(0.5f);
         inv = false;
     }
 }

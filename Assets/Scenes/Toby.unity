@@ -1368,17 +1368,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Banner Spawner
       objectReference: {fileID: 0}
-    - target: {fileID: 4083404398843630244, guid: eebee13eba3f7b649be41dfdc8b4802d, type: 3}
-      propertyPath: canvasRectTransform
-      value: 
-      objectReference: {fileID: 1062439388}
     - target: {fileID: 7403188416577559915, guid: eebee13eba3f7b649be41dfdc8b4802d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7403188416577559915, guid: eebee13eba3f7b649be41dfdc8b4802d, type: 3}
       propertyPath: m_Pivot.y
-      value: 0
+      value: 0.50000024
       objectReference: {fileID: 0}
     - target: {fileID: 7403188416577559915, guid: eebee13eba3f7b649be41dfdc8b4802d, type: 3}
       propertyPath: m_AnchorMax.x
@@ -1438,7 +1434,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7403188416577559915, guid: eebee13eba3f7b649be41dfdc8b4802d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -302
+      value: -153
       objectReference: {fileID: 0}
     - target: {fileID: 7403188416577559915, guid: eebee13eba3f7b649be41dfdc8b4802d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1453,7 +1449,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 4083404398843630244, guid: eebee13eba3f7b649be41dfdc8b4802d, type: 3}
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

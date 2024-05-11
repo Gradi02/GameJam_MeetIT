@@ -46,13 +46,13 @@ public class Menu : MonoBehaviour
 
         if (First) 
         { 
-            start.color = new Color(0,255,255);
+            start.color = new Color(60 / 255f, 184 / 255f, 207 / 255f);
             exit.color = new Color(255, 255, 255);
         }
         if (Second)
         {
             start.color = new Color(255, 255, 255);
-            exit.color = new Color(0, 255, 255);
+            exit.color = new Color(60 / 255f, 184 / 255f, 207 / 255f);
         }
     }
 
@@ -60,10 +60,10 @@ public class Menu : MonoBehaviour
     {
         while (true)
         {
-            float i = Random.Range(0.1f, 0.8f);
+            float i = Random.Range(0.8f, 1.8f);
             yield return new WaitForSeconds(i);
             name.gameObject.SetActive(false);
-            i = Random.Range(0.1f, 0.8f);
+            i = Random.Range(0.1f, 0.3f);
             yield return new WaitForSeconds(i);
             name.gameObject.SetActive(true);
         }

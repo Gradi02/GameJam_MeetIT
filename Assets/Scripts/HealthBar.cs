@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class HealthBar : MonoBehaviour
 {
@@ -66,5 +68,14 @@ public class HealthBar : MonoBehaviour
         spr.color = c2;
         yield return new WaitForSeconds(0.5f);
         inv = false;
+
+        EdgeGlowVolume eg = VolumeManager.instance.stack.GetComponent<EdgeGlowVolume>();
+        for (int i = 0; i < 2; i++)
+        {
+            eg.Active = new BoolParameter(true, true);
+            yield return new WaitForSeconds(0.2f);
+            eg.Active = new BoolParameter(false, true);
+            yield return new WaitForSeconds(0.2f);
+        }
     }
 }

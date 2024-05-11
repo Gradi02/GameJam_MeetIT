@@ -44,20 +44,26 @@ public class HealthBar : MonoBehaviour
             {
                 serca[i].gameObject.SetActive(false);
             }
-            StartCoroutine(hit());
-        }
 
-        if(iloscSerc <= 0)
-        {
-            GameObject.FindGameObjectWithTag("manager").GetComponent<GameOver>().Gameover();
+            if (iloscSerc <= 0)
+            {
+                GameObject.FindGameObjectWithTag("manager").GetComponent<GameOver>().Gameover();
+            }
+            else
+            {
+                StartCoroutine(hit());
+            }
         }
     }
 
     private IEnumerator hit()
     {
+        EdgeGlowVolume eg = VolumeManager.instance.stack.GetComponent<EdgeGlowVolume>();
         Time.timeScale = 0.01f;
         inv = true;
+        eg.Active = new BoolParameter(true, true);
         yield return new WaitForSeconds(0.01f);
+        eg.Active = new BoolParameter(false, true);
         Time.timeScale = 1;
         spr.color = c1;
         yield return new WaitForSeconds(0.5f);
@@ -68,14 +74,5 @@ public class HealthBar : MonoBehaviour
         spr.color = c2;
         yield return new WaitForSeconds(0.5f);
         inv = false;
-
-        EdgeGlowVolume eg = VolumeManager.instance.stack.GetComponent<EdgeGlowVolume>();
-        for (int i = 0; i < 2; i++)
-        {
-            eg.Active = new BoolParameter(true, true);
-            yield return new WaitForSeconds(0.2f);
-            eg.Active = new BoolParameter(false, true);
-            yield return new WaitForSeconds(0.2f);
-        }
     }
 }

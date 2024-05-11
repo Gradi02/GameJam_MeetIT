@@ -5,10 +5,15 @@ using UnityEngine;
 public class BoostSpawner : MonoBehaviour
 {
     public float spawningDistance = 1;
+    public float startSpawnTime;
 
     private float nextSpawn = 0;
 
     public GameObject[] boostPrefab;
+    private void Awake()
+    {
+        nextSpawn = startSpawnTime + Time.time;
+    }
 
     private void FixedUpdate()
     {

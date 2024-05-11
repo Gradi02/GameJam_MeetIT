@@ -8,11 +8,18 @@ public class Strzelaniev2 : MonoBehaviour
     [SerializeField]
     private Transform subPos0, subPos1, subPos2;
 
+    public float startSpawnTime;
+
     private float nextShot = 0;
     private float nextShotTime = 0.3f;
 
     private bool normalBullets = false;
     private bool burst = false;
+
+    private void Awake()
+    {
+        nextShot = Time.time + startSpawnTime;
+    }
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))

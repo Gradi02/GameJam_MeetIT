@@ -21,7 +21,7 @@ public class PiratGadaIJara : MonoBehaviour
 
     public IEnumerator SprawnPirate()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.5f);
         Instantiate(pirat, transform.position, Quaternion.identity, canvasRectTransform);
     }
 }

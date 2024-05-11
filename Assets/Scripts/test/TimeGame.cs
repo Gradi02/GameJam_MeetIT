@@ -12,7 +12,7 @@ public class TimeGame : MonoBehaviour
         int seconds = Mathf.FloorToInt(currentTime % 60);
 
         // Format the time as a string with leading zeros for single-digit seconds
-        string formattedTime = string.Format("{0:00}:{1:00}", minutes, seconds);
+        string formattedTime = string.Format("{0:00}.{1:00}", minutes, seconds);
 
         // Update the text UI
         timeText.text = formattedTime;

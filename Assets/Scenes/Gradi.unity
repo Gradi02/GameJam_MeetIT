@@ -793,6 +793,7 @@ GameObject:
   m_Component:
   - component: {fileID: 777283781}
   - component: {fileID: 777283780}
+  - component: {fileID: 777283791}
   - component: {fileID: 777283787}
   - component: {fileID: 777283786}
   - component: {fileID: 777283783}
@@ -999,6 +1000,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &777283791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777283778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a705ca201ce8e4f47b4b376b4b822f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  macka: {fileID: 3984815031068415410, guid: e7ebb8252572bdf46b52dc3d4863d501, type: 3}
+  krakenHP: {fileID: 0}
 --- !u!1 &984324458
 GameObject:
   m_ObjectHideFlags: 0

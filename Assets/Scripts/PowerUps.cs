@@ -17,13 +17,15 @@ public class PowerUps : MonoBehaviour
         stl = GetComponent<Strzelaniev2>();
     }
 
-    [ContextMenu("t1")]
     public void FreezeMap()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         foreach(GameObject e in enemies)
         {
-
+            if(e.GetComponent<EnemyMovement>() != null)
+            {
+                e.GetComponent<IFreeze>().FreezeEnemy();
+            }
         }
     }
     public void MoreBullets()
@@ -59,4 +61,9 @@ public class PowerUps : MonoBehaviour
             act2 = false;
         }
     }
+}
+
+public interface IFreeze
+{
+    public void FreezeEnemy();
 }

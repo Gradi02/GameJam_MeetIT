@@ -33,6 +33,10 @@ public class BoostTowards : MonoBehaviour
             {
                 pwr.MoreBullets();
             }
+            else if(ptype == "freeze")
+            {
+                pwr.FreezeMap();
+            }
             Destroy(gameObject);
         }
     }

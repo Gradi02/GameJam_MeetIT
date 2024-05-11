@@ -25,5 +25,4 @@ public class EnemyRotateAround : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         Destroy(this);
     }
-
 }

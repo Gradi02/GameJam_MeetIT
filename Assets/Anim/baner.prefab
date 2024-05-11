@@ -291,7 +291,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Rotate left - A
 
-    Rotate right - R
+    Rotate right - D
 
     Change Bullets - Space'
   m_isRightToLeft: 0

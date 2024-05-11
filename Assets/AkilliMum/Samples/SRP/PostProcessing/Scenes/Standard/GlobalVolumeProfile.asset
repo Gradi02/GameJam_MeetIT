@@ -15,7 +15,7 @@ MonoBehaviour:
   active: 1
   Active:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   When:
     m_OverrideState: 1
     m_Value: 500
@@ -183,7 +183,7 @@ MonoBehaviour:
   active: 1
   Active:
     m_OverrideState: 1
-    m_Value: 0
+    m_Value: 1
   When:
     m_OverrideState: 1
     m_Value: 500
@@ -193,16 +193,16 @@ MonoBehaviour:
     dimension: 1
   Size:
     m_OverrideState: 1
-    m_Value: 21
+    m_Value: 23.2
   BlockDensity:
     m_OverrideState: 1
-    m_Value: 0.133
+    m_Value: 0.094
   LineDensity:
     m_OverrideState: 1
-    m_Value: 0.648
+    m_Value: 0.322
   Speed:
     m_OverrideState: 1
-    m_Value: 2.14
+    m_Value: 7.38
 --- !u!114 &9089219839632824142
 MonoBehaviour:
   m_ObjectHideFlags: 3

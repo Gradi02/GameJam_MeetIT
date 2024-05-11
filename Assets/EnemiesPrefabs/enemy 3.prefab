@@ -191,6 +191,7 @@ MonoBehaviour:
   hp: 100
   enemy_color: black
   scoreToGet: 50
+  prt: {fileID: 3672223054839458232, guid: 0642bfa5baa370947bc361d2df02ff92, type: 3}
 --- !u!95 &1918751547230251856
 Animator:
   serializedVersion: 5

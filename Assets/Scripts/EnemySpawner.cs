@@ -5,13 +5,17 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public float spawningDistance = 100;
+    public float startSpawnTime;
 
     private float nextSpawn = 0;
     [SerializeField] private float nextSpawnTime = 1;
 
     public GameObject[] enemyPrefab;
     //public List<GameObject> enemies = new List<GameObject>();
-
+    private void Awake()
+    {
+        nextSpawn = startSpawnTime + Time.time;
+    }
     private void FixedUpdate()
     {
         if(Time.time > nextSpawn)

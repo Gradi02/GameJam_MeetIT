@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,8 +14,14 @@ public class PiratGadaIJara : MonoBehaviour
             Debug.LogError("Brak referencji do canvasu!");
             return;
         }
-        
-        Instantiate(pirat, transform.position, Quaternion.identity, canvasRectTransform);
 
+        StartCoroutine(SprawnPirate());
+
+    }
+
+    public IEnumerator SprawnPirate()
+    {
+        yield return new WaitForSeconds(2f);
+        Instantiate(pirat, transform.position, Quaternion.identity, canvasRectTransform);
     }
 }

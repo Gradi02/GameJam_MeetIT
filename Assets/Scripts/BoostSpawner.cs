@@ -7,7 +7,6 @@ public class BoostSpawner : MonoBehaviour
     public float spawningDistance = 1;
 
     private float nextSpawn = 0;
-    [SerializeField] private float nextSpawnTime = 1;
 
     public GameObject[] boostPrefab;
 
@@ -15,7 +14,7 @@ public class BoostSpawner : MonoBehaviour
     {
         if (Time.time > nextSpawn)
         {
-            nextSpawn = Time.time + nextSpawnTime;
+            nextSpawn = Time.time + Random.Range(2, 10);
             int ang = Random.Range(0, 360);
             float x = spawningDistance * Mathf.Cos(ang);
             float y = spawningDistance * Mathf.Sin(ang);

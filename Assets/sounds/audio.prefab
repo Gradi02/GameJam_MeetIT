@@ -49,11 +49,53 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: afa7e337fd3644c4f8a9bffab7e11aa4, type: 3}
     playonawake: 1
     loop: 0
-    volume: 0.944
+    volume: 0.9
     source: {fileID: 0}
   - name: gameover
     clip: {fileID: 8300000, guid: 4a5bfbc1bc31afa4aba84828d675f3fe, type: 3}
     playonawake: 0
     loop: 0
-    volume: 0.944
+    volume: 0.9
+    source: {fileID: 0}
+  - name: hit
+    clip: {fileID: 8300000, guid: c312965935b3310409ed366adc75e17e, type: 3}
+    playonawake: 0
+    loop: 0
+    volume: 1
+    source: {fileID: 0}
+  - name: heal
+    clip: {fileID: 8300000, guid: 0be4c529db626fa49a81b4abc77d3508, type: 3}
+    playonawake: 0
+    loop: 0
+    volume: 0.9
+    source: {fileID: 0}
+  - name: ui
+    clip: {fileID: 8300000, guid: aec5e61aabaf0864cb2a6d0501c59a6d, type: 3}
+    playonawake: 0
+    loop: 0
+    volume: 1
+    source: {fileID: 0}
+  - name: freeze
+    clip: {fileID: 8300000, guid: f97dcc75e533eaa47b627cc7f9db5bea, type: 3}
+    playonawake: 0
+    loop: 0
+    volume: 0.7
+    source: {fileID: 0}
+  - name: phantom
+    clip: {fileID: 8300000, guid: 643e72f51e9c1e9489a6517fd14209be, type: 3}
+    playonawake: 0
+    loop: 0
+    volume: 0.7
+    source: {fileID: 0}
+  - name: enemydeath
+    clip: {fileID: 8300000, guid: ba1884e47d55f6a4a9ba143ff6169bd3, type: 3}
+    playonawake: 0
+    loop: 0
+    volume: 0.4
+    source: {fileID: 0}
+  - name: enemyshot
+    clip: {fileID: 8300000, guid: 7a4704629a4ba474193e42fb17550c41, type: 3}
+    playonawake: 0
+    loop: 0
+    volume: 0.3
     source: {fileID: 0}

@@ -17,10 +17,12 @@ public class HealthBar : MonoBehaviour
     {
         iloscSerc = serca.Length;
         spr = GetComponent<SpriteRenderer>();
+        FindObjectOfType<AudioManager>().Play("sound");
     }
 
     public void AddHealth()
     {
+        FindObjectOfType<AudioManager>().Play("heal");
         if (iloscSerc < serca.Length)
         {
             iloscSerc++;
@@ -39,6 +41,7 @@ public class HealthBar : MonoBehaviour
         if (iloscSerc > 0)
         {
             iloscSerc--;
+            FindObjectOfType<AudioManager>().Play("hit");
 
             for (int i = iloscSerc; i < serca.Length; i++)
             {

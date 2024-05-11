@@ -4,8 +4,12 @@ using UnityEngine.UI;
 
 public class PiratGadaIJara : MonoBehaviour
 {
-    public RectTransform canvasRectTransform;
+    public GameObject piratSpawner;
+    public GameObject banerSpawner;
     public GameObject pirat;
+    public GameObject baner;
+    public RectTransform canvasRectTransform;
+
     void Start()
     {
 
@@ -22,6 +26,7 @@ public class PiratGadaIJara : MonoBehaviour
     public IEnumerator SprawnPirate()
     {
         yield return new WaitForSeconds(0.5f);
-        Instantiate(pirat, transform.position, Quaternion.identity, canvasRectTransform);
+        Instantiate(pirat, piratSpawner.transform.position, Quaternion.identity, canvasRectTransform);
+        Instantiate(baner, banerSpawner.transform.position, Quaternion.identity, canvasRectTransform);
     }
 }

@@ -7,7 +7,7 @@ public class PiratGadaIJara : MonoBehaviour
     public GameObject piratSpawner;
     public GameObject banerSpawner;
     public GameObject pirat;
-    public GameObject baner;
+    public GameObject baner, baner2;
     public RectTransform canvasRectTransform;
 
     void Start()
@@ -19,14 +19,20 @@ public class PiratGadaIJara : MonoBehaviour
             return;
         }
 
-        StartCoroutine(SprawnPirate());
+        StartCoroutine(SprawnPirate(true));
 
     }
 
-    public IEnumerator SprawnPirate()
+    public void stcr()
+    {
+        StartCoroutine(SprawnPirate(false));
+    }
+
+    public IEnumerator SprawnPirate(bool one)
     {
         yield return new WaitForSeconds(0.5f);
         Instantiate(pirat, piratSpawner.transform.position, Quaternion.identity, canvasRectTransform);
-        Instantiate(baner, banerSpawner.transform.position, Quaternion.identity, canvasRectTransform);
+        Instantiate(one ? baner : baner2, banerSpawner.transform.position, Quaternion.identity, canvasRectTransform);
+        FindObjectOfType<AudioManager>().Play(one ? "pirat" : "pirat2");
     }
 }

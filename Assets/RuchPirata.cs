@@ -7,6 +7,7 @@ public class RuchPirata : MonoBehaviour
 {
     void Start()
     {
+        Destroy(gameObject, 20);
         Time.timeScale = 1;
         Canvas canvas = FindObjectOfType<Canvas>();
 

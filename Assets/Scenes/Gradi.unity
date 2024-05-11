@@ -1277,8 +1277,8 @@ MonoBehaviour:
   spawningDistance: 10
   startSpawnTime: 8
   enemyPrefab:
-  - {fileID: 4400864230018387092, guid: 9df32af9f4663ac489760828d039da2b, type: 3}
-  - {fileID: 4400864230018387092, guid: 9df32af9f4663ac489760828d039da2b, type: 3}
+  - {fileID: 8241993024914861636, guid: 96344b9e98e7a5b4e8c64d676f2cc5db, type: 3}
+  - {fileID: 8241993024914861636, guid: 96344b9e98e7a5b4e8c64d676f2cc5db, type: 3}
   - {fileID: 4400864230018387092, guid: 0c2e0b22f83bc324bb8bef35ddbb2664, type: 3}
   - {fileID: 4400864230018387092, guid: 0c2e0b22f83bc324bb8bef35ddbb2664, type: 3}
   - {fileID: 4400864230018387092, guid: 129fed65eb358ae4a962a87914f2c319, type: 3}
@@ -1414,6 +1414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67dbcfc65941b8e4db1c2a7796ff26cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  freeze: {fileID: 0}
 --- !u!114 &777283789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1643,6 +1644,7 @@ MonoBehaviour:
   banerSpawner: {fileID: 340390938}
   pirat: {fileID: 8377145502089804496, guid: ccd8db5a1adeb494d9ba2b8f35994685, type: 3}
   baner: {fileID: 3715612409857439656, guid: 2744ea6a11c674c4facf2fabae9b8e20, type: 3}
+  baner2: {fileID: 3715612409857439656, guid: 9142acf86d8a2424d871da3cb2137c62, type: 3}
   canvasRectTransform: {fileID: 1379196602}
 --- !u!1 &1149708436
 GameObject:

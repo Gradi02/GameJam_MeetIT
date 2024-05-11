@@ -1,13 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class RuchBannera : MonoBehaviour
 {
     void Start()
     {
+        Destroy(gameObject, 20);
         Canvas canvas = FindObjectOfType<Canvas>();
 
         if (canvas == null)

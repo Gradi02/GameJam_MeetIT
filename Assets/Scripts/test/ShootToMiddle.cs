@@ -18,6 +18,7 @@ public class ShootToMiddle : MonoBehaviour
         {
             yield return new WaitForSeconds(cooldown);
             Instantiate(bullet, transform.position, Quaternion.identity);
+            FindObjectOfType<AudioManager>().Play("enemyshot");
         }
     }
 }

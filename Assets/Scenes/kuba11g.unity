@@ -353,6 +353,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -478,6 +479,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: af8b7521a4ad3444ca9791d069f598e9, type: 2}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -574,6 +592,7 @@ GameObject:
   - component: {fileID: 783464234}
   - component: {fileID: 783464233}
   - component: {fileID: 783464238}
+  - component: {fileID: 783464239}
   m_Layer: 0
   m_Name: player
   m_TagString: Player
@@ -600,7 +619,6 @@ MonoBehaviour:
   - {fileID: 4400864230018387092, guid: 0c2e0b22f83bc324bb8bef35ddbb2664, type: 3}
   - {fileID: 4400864230018387092, guid: 129fed65eb358ae4a962a87914f2c319, type: 3}
   - {fileID: 4400864230018387092, guid: 70eef8fd03d7aba4fbb6a044356f60ff, type: 3}
-  enemies: []
 --- !u!114 &783464234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -627,6 +645,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab1: {fileID: 8656400887951297115, guid: 53cca0797e511ab42ae769b07bca6309, type: 3}
   projectilePrefab2: {fileID: 8656400887951297115, guid: 2a8476f3c734ddc4690b0e8a0aea1393, type: 3}
+  subPos0: {fileID: 0}
+  subPos1: {fileID: 0}
+  subPos2: {fileID: 0}
 --- !u!212 &783464236
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -710,6 +731,18 @@ MonoBehaviour:
   nextSpawnTime: 1
   boostPrefab:
   - {fileID: 3050896113385584723, guid: e893ac82d5d1e7a43815350509b556a0, type: 3}
+--- !u!114 &783464239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783464232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc764e6847bb70d49aca5802bf50bbcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1550464141
 GameObject:
   m_ObjectHideFlags: 0

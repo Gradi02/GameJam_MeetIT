@@ -19,6 +19,7 @@ public class PowerUps : MonoBehaviour
 
     public void FreezeMap()
     {
+        FindObjectOfType<AudioManager>().Play("freeze");
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         foreach(GameObject e in enemies)
         {

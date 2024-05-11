@@ -9,6 +9,7 @@ public class EnemyRotateAround : MonoBehaviour
     public GameObject Enemy;
     void Start()
     {
+        FindObjectOfType<AudioManager>().Play("phantom");
         Enemy.transform.localScale = new Vector3(0, 0, 0);
         int rotate = Random.Range(0, 360);
         this.gameObject.transform.Rotate(0, 0, +rotate);

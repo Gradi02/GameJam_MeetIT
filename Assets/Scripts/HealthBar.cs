@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 
 public class HealthBar : MonoBehaviour
 {
@@ -15,10 +17,12 @@ public class HealthBar : MonoBehaviour
     {
         iloscSerc = serca.Length;
         spr = GetComponent<SpriteRenderer>();
+        FindObjectOfType<AudioManager>().Play("sound");
     }
 
     public void AddHealth()
     {
+        FindObjectOfType<AudioManager>().Play("heal");
         if (iloscSerc < serca.Length)
         {
             iloscSerc++;
@@ -37,25 +41,32 @@ public class HealthBar : MonoBehaviour
         if (iloscSerc > 0)
         {
             iloscSerc--;
+            FindObjectOfType<AudioManager>().Play("hit");
 
             for (int i = iloscSerc; i < serca.Length; i++)
             {
                 serca[i].gameObject.SetActive(false);
             }
-            StartCoroutine(hit());
-        }
 
-        if(iloscSerc <= 0)
-        {
-            GameObject.FindGameObjectWithTag("manager").GetComponent<GameOver>().Gameover();
+            if (iloscSerc <= 0)
+            {
+                GameObject.FindGameObjectWithTag("manager").GetComponent<GameOver>().Gameover();
+            }
+            else
+            {
+                StartCoroutine(hit());
+            }
         }
     }
 
     private IEnumerator hit()
     {
+        EdgeGlowVolume eg = VolumeManager.instance.stack.GetComponent<EdgeGlowVolume>();
         Time.timeScale = 0.01f;
         inv = true;
+        eg.Active = new BoolParameter(true, true);
         yield return new WaitForSeconds(0.01f);
+        eg.Active = new BoolParameter(false, true);
         Time.timeScale = 1;
         spr.color = c1;
         yield return new WaitForSeconds(0.5f);

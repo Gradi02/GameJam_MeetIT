@@ -1,27 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
 public class GameOver : MonoBehaviour
 {
-    public Image img;
-    private Color fromColor = new Color(0, 0, 0, 0);
-
-
-    public void Gameover()
+    public GameObject img;
+    private void Start()
     {
-        StartCoroutine(fade());
+        img.SetActive(false);
     }
 
-    private IEnumerator fade()
+    [ContextMenu("t")]
+    public void Gameover()
     {
-        Color c = fromColor;
-        while (c.a < 1)
-        {
-            yield return new WaitForSeconds(0.1f);
-            c.a += 0.05f;
-            img.color = c;
-        }
+        EdgeGlowVolume eg = VolumeManager.instance.stack.GetComponent<EdgeGlowVolume>();
+        eg.Active = new BoolParameter(true, true);
+        FindObjectOfType<AudioManager>().Stop("sound");
+        FindObjectOfType<AudioManager>().Play("gameover");
+        StartCoroutine(end());
+    }
+
+    private IEnumerator end()
+    {
+        yield return new WaitForSeconds(2f);
+        Time.timeScale = 0;
+        img.SetActive(true);
     }
 }

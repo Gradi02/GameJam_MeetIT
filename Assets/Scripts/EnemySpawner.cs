@@ -34,7 +34,8 @@ public class EnemySpawner : MonoBehaviour
             GameObject g = Instantiate(objToSpawn, spawnPos, Quaternion.identity);
             Vector2 directionToCenter = Vector2.zero - spawnPos;
             Quaternion rotationToCenter = Quaternion.LookRotation(Vector3.forward, directionToCenter);
-            g.transform.rotation = rotationToCenter;
+            Quaternion rotation90Degrees = Quaternion.Euler(0, 0, 90); // Rotate by -90 degrees around the z-axis
+            g.transform.rotation = rotationToCenter * rotation90Degrees;
         }
         else
         {

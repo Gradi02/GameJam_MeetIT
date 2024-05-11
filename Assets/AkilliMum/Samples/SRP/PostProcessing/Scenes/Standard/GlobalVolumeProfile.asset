@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e9cfa44da4f34c64bb4e878d6833959b, type: 3}
   m_Name: VCRVolume
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   Active:
     m_OverrideState: 1
     m_Value: 1
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9552dc531ee036d499efc8422245ab19, type: 3}
   m_Name: GlitchVolume
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   Active:
     m_OverrideState: 1
     m_Value: 1

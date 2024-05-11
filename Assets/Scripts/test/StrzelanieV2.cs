@@ -33,13 +33,17 @@ public class Strzelaniev2 : MonoBehaviour
 
             if (!burst)
             {
-                Instantiate(normalBullets ? projectilePrefab1 : projectilePrefab2, transform.position, transform.rotation);
+                Quaternion randomRotation1 = Quaternion.Euler(0, 0, Random.Range(-5f, 5f));
+                Instantiate(normalBullets ? projectilePrefab1 : projectilePrefab2, transform.position, transform.rotation * randomRotation1);
             }
             else
             {
-                Instantiate(normalBullets ? projectilePrefab1 : projectilePrefab2, subPos0.position, transform.rotation);
-                Instantiate(normalBullets ? projectilePrefab1 : projectilePrefab2, subPos1.position, transform.rotation);
-                Instantiate(normalBullets ? projectilePrefab1 : projectilePrefab2, subPos2.position, transform.rotation);
+                Quaternion randomRotation2 = Quaternion.Euler(0, 0, Random.Range(-5f, 5f));
+                Quaternion randomRotation3 = Quaternion.Euler(0, 0, Random.Range(-5f, 5f));
+                Quaternion randomRotation4 = Quaternion.Euler(0, 0, Random.Range(-5f, 5f));
+                Instantiate(normalBullets ? projectilePrefab1 : projectilePrefab2, subPos0.position, transform.rotation * randomRotation2);
+                Instantiate(normalBullets ? projectilePrefab1 : projectilePrefab2, subPos1.position, transform.rotation * randomRotation3);
+                Instantiate(normalBullets ? projectilePrefab1 : projectilePrefab2, subPos2.position, transform.rotation * randomRotation4);
             }
         }
     }

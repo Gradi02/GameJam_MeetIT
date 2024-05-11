@@ -2,11 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour
+public class EnemyMovement : MonoBehaviour, IFreeze
 {
     public float endDistance = 2;
     public float speed = 3;
     private Transform player;
+    private float lastSpeed = 0;
+    private float timeToResetFreeze = 0;
+    private float freezeTime = 5;
+    private bool freezed = false;
 
     private void Start()
     {
@@ -26,8 +30,23 @@ public class EnemyMovement : MonoBehaviour
         }
     }
 
-    public void RemoveFromList()
+    public void FreezeEnemy()
     {
-        //player.GetComponent<EnemySpawner>().enemies.Remove(gameObject);
+        if (GetComponent<EnemyInfo>().enemy_color == "white")
+        {
+            lastSpeed = speed;
+            speed /= 4;
+            timeToResetFreeze = Time.time + freezeTime;
+            freezed = true;
+        }
+    }
+
+    void Update()
+    {
+        if(Time.time > timeToResetFreeze && freezed)
+        {
+            freezed = false;
+            speed = lastSpeed;
+        }
     }
 }

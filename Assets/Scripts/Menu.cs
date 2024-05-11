@@ -5,17 +5,20 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
     public TextMeshProUGUI name;
     public TextMeshProUGUI start;
     public TextMeshProUGUI exit;
+    public GameObject bg;
     private bool First = true;
     private bool Second = false;
 
     private void Start()
     {
+        bg.SetActive(false);
         FindObjectOfType<AudioManager>().Play("sound");
         StartCoroutine(ChangeColors());
     }
@@ -48,8 +51,8 @@ public class Menu : MonoBehaviour
             }
         }
 
-        if (First) 
-        { 
+        if (First)
+        {
             start.color = new Color(60 / 255f, 184 / 255f, 207 / 255f);
             exit.color = new Color(255, 255, 255);
         }
@@ -59,7 +62,6 @@ public class Menu : MonoBehaviour
             exit.color = new Color(60 / 255f, 184 / 255f, 207 / 255f);
         }
     }
-
     public IEnumerator ChangeColors ()
     {
         while (true)

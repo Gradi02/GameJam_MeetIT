@@ -7,6 +7,7 @@ public class RuchBannera : MonoBehaviour
 {
     void Start()
     {
+        Destroy(gameObject, 20);
         Canvas canvas = FindObjectOfType<Canvas>();
 
         if (canvas == null)

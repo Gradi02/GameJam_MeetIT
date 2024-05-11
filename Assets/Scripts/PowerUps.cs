@@ -31,6 +31,7 @@ public class PowerUps : MonoBehaviour
     }
     public void MoreBullets()
     {
+        FindObjectOfType<AudioManager>().Play("upgrade");
         stl.SetBurst(true);
         act2 = true;
         timeToResetDbl = Time.time + 10;
@@ -38,6 +39,7 @@ public class PowerUps : MonoBehaviour
 
     public void DoubleBulletRate()
     {
+        FindObjectOfType<AudioManager>().Play("upgrade");
         stl.SetRate(0.1f);
         act = true;
         timeToResetRate = Time.time + 10;

@@ -30,4 +30,5 @@ public class BoostSpawner : MonoBehaviour
             g.transform.rotation = rotationToCenter;*/
         }
     }
+
 }

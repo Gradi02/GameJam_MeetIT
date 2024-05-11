@@ -36,6 +36,8 @@ public class Kraken : MonoBehaviour
     {
         krakenHP.gameObject.SetActive(true);
         GetComponent<EnemySpawner>().enabled = false;
+        FindObjectOfType<AudioManager>().Stop("sound");
+        FindObjectOfType<AudioManager>().Play("boss");
 
         StartCoroutine(spawn());
         krakenHP.maxValue = krakenHealth;
@@ -48,10 +50,10 @@ public class Kraken : MonoBehaviour
     {
         for (int i = 0; i < 6; i++)
         {
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(1f);
             GameObject k = Instantiate(macka, mackiPos[i], Quaternion.identity);
             macki[i] = k;
-            if (i > 2) k.GetComponent<SpriteRenderer>().flipX = true;
+            if (i < 3) k.GetComponent<SpriteRenderer>().flipX = true;
             //animacja
         }
     }
@@ -101,6 +103,8 @@ public class Kraken : MonoBehaviour
             krakenHP.gameObject.SetActive(false);
             Points.Score += 1000;
             krakenHealth = 10000;
+            FindObjectOfType<AudioManager>().Stop("boss");
+            FindObjectOfType<AudioManager>().Play("sound");
         }
     }
 

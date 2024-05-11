@@ -12,7 +12,7 @@ public class macka : MonoBehaviour
             {
                 GameObject.FindGameObjectWithTag("Player").GetComponent<Kraken>().Damage();
                 Destroy(collision.gameObject);
-                FindObjectOfType<AudioManager>().Play("enemydeath");
+                //FindObjectOfType<AudioManager>().Play("enemydeath");
             }
         }
     }

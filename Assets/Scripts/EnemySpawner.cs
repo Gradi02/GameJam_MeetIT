@@ -67,6 +67,7 @@ public class EnemySpawner : MonoBehaviour
         if(ifKraken)
         {
             GameObject.FindGameObjectWithTag("Player").GetComponent<Kraken>().SpawnKraken();
+            GameObject.FindGameObjectWithTag("manager").GetComponent<PiratGadaIJara>().stcr();
         }
         ifKraken = !ifKraken;
     }

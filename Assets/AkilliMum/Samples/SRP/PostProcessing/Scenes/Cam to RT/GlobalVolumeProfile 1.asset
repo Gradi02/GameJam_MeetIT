@@ -25,6 +25,34 @@ MonoBehaviour:
   EdgeColor:
     m_OverrideState: 0
     m_Value: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &-1010237477293592646
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 200a29924df02d048adc76ad97d6f738, type: 3}
+  m_Name: CRTVolume
+  m_EditorClassIdentifier: 
+  active: 1
+  Active:
+    m_OverrideState: 1
+    m_Value: 1
+  When:
+    m_OverrideState: 0
+    m_Value: 500
+  Scan:
+    m_OverrideState: 0
+    m_Value: -0.18
+  Brightness:
+    m_OverrideState: 0
+    m_Value: 1
+  Offset:
+    m_OverrideState: 1
+    m_Value: 1
 --- !u!114 &-32820517437979890
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -88,6 +116,7 @@ MonoBehaviour:
   - {fileID: 1881579288749618558}
   - {fileID: -32820517437979890}
   - {fileID: -8088500286723445845}
+  - {fileID: -1010237477293592646}
 --- !u!114 &1881579288749618558
 MonoBehaviour:
   m_ObjectHideFlags: 3

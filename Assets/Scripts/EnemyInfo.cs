@@ -6,6 +6,7 @@ public class EnemyInfo : MonoBehaviour
 {
     [SerializeField] private int hp = 100;
     public string enemy_color;
+    public int scoreToGet = 50;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -20,6 +21,7 @@ public class EnemyInfo : MonoBehaviour
 
                     if (hp < 0)
                     {
+                        Points.Score += scoreToGet;
                         Destroy(transform.root.gameObject);
                     }
                 }

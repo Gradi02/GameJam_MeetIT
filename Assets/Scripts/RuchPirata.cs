@@ -7,6 +7,7 @@ public class RuchPirata : MonoBehaviour
 {
     void Start()
     {
+        Time.timeScale = 1;
         Canvas canvas = FindObjectOfType<Canvas>();
 
         if (canvas == null)

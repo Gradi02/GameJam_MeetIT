@@ -24,6 +24,6 @@ public class RuchBannera : MonoBehaviour
         Vector3 targetPosition = new Vector3(canvasRectTransform.rect.width/2, transform.position.y+370, 0f);
         LeanTween.move(gameObject, targetPosition, 1.0f).setEase(LeanTweenType.easeInOutSine);
         Vector3 targetPosition2 = new Vector3(canvasRectTransform.rect.width/2, transform.position.y - 400, 0f);
-        LeanTween.move(gameObject,targetPosition2 ,1.0f).setEase(LeanTweenType.easeInOutSine).setDelay(4f);
+        LeanTween.move(gameObject,targetPosition2 ,1.0f).setEase(LeanTweenType.easeInOutSine).setDelay(8f);
     }
 }

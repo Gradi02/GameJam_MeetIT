@@ -20,4 +20,13 @@ public class BulletGoingMiddle : MonoBehaviour
             }
         }
     }
+
+    private void Update()
+    {
+        if(Vector2.Distance(transform.position, Vector2.zero) < 0.5f)
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<HealthBar>().DecresseHealth();
+            Destroy(gameObject);
+        }
+    }
 }

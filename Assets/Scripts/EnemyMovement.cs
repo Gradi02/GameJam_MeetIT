@@ -21,7 +21,7 @@ public class EnemyMovement : MonoBehaviour, IFreeze
     {
         if(Vector2.Distance(player.position, transform.position) > endDistance)
         {
-            transform.position += transform.up * speed * Time.fixedDeltaTime;
+            transform.position += transform.right * speed * Time.fixedDeltaTime;
         }
         else if(Vector2.Distance(player.position, transform.position) < 0.2f)
         {

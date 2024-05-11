@@ -18,6 +18,7 @@ public class GameOver : MonoBehaviour
     {
         EdgeGlowVolume eg = VolumeManager.instance.stack.GetComponent<EdgeGlowVolume>();
         eg.Active = new BoolParameter(true, true);
+        FindObjectOfType<AudioManager>().Stop("sound");
         FindObjectOfType<AudioManager>().Play("gameover");
         StartCoroutine(end());
     }

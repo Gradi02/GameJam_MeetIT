@@ -21,6 +21,7 @@ public class EnemyInfo : MonoBehaviour
 
                     if (hp < 0)
                     {
+                        FindObjectOfType<AudioManager>().Play("enemydeath");
                         Points.Score += scoreToGet;
                         Destroy(transform.root.gameObject);
                     }

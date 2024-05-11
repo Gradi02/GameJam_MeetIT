@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyInfo : MonoBehaviour
 {
-    private int hp = 100;
+    [SerializeField] private int hp = 100;
     public string enemy_color;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -20,8 +20,7 @@ public class EnemyInfo : MonoBehaviour
 
                     if (hp < 0)
                     {
-                        GetComponent<EnemyMovement>().RemoveFromList();
-                        Destroy(gameObject);
+                        Destroy(transform.root.gameObject);
                     }
                 }
             }

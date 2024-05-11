@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -950975575575736753}
   m_Layer: 0
   m_Name: enemy 3
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,8 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1323c6cc04576f84eaa3527cec4291ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endDistance: 2
-  speed: 2
+  endDistance: 0.1
+  speed: 0.5
 --- !u!61 &927835169603587748
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -186,4 +186,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9567e809ccdf184984b3038be4b0e86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hp: 400
   enemy_color: black

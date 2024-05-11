@@ -18,6 +18,14 @@ public class PowerUps : MonoBehaviour
     }
 
     [ContextMenu("t1")]
+    public void FreezeMap()
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach(GameObject e in enemies)
+        {
+
+        }
+    }
     public void MoreBullets()
     {
         stl.SetBurst(true);
@@ -25,7 +33,6 @@ public class PowerUps : MonoBehaviour
         timeToResetDbl = Time.time + 10;
     }
 
-    [ContextMenu("t2")]
     public void DoubleBulletRate()
     {
         stl.SetRate(0.1f);

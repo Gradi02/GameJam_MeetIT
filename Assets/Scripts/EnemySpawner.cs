@@ -8,7 +8,9 @@ public class EnemySpawner : MonoBehaviour
     public float startSpawnTime;
 
     private float nextSpawn = 0;
-    [SerializeField] private float nextSpawnTime = 1;
+    private float nextSpawnTime = 3;
+    private bool[] stages = new bool[10];
+    private int i = 0;
 
     public GameObject[] enemyPrefab;
     //public List<GameObject> enemies = new List<GameObject>();
@@ -45,5 +47,21 @@ public class EnemySpawner : MonoBehaviour
         {
             Instantiate(objToSpawn, transform.position, Quaternion.identity);
         }
+    }
+
+    private void Update()
+    {
+        if (!stages[i] && Points.Score > i*1000+1000)
+        {
+            i++;
+            Faster();
+            Debug.Log(i);
+        }
+    }
+
+    public void Faster()
+    {
+        nextSpawnTime -= 0.2f;
+        GetComponent<Rotation>().IncrsRot();
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Rotation : MonoBehaviour
 {
-    private float rotate = 2f;
+    private float rotate = 4f;
 
     void FixedUpdate()
     {
@@ -16,5 +16,10 @@ public class Rotation : MonoBehaviour
         {
             transform.Rotate(0, 0, -rotate);
         }
+    }
+
+    public void IncrsRot()
+    {
+        rotate += 0.2f;
     }
 }

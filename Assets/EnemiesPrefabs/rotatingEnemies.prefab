@@ -117,7 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 100
-  enemy_color: black
+  enemy_color: white
   scoreToGet: 50
 --- !u!50 &205367440715014984
 Rigidbody2D:

@@ -188,7 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 400
-  enemy_color: white
+  enemy_color: black
   scoreToGet: 50
 --- !u!95 &5080083435875653862
 Animator:

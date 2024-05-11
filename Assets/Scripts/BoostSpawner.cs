@@ -20,9 +20,9 @@ public class BoostSpawner : MonoBehaviour
             float y = spawningDistance * Mathf.Sin(ang);
             Vector2 spawnPos = new Vector2(x, y);
             GameObject g = Instantiate(boostPrefab[Random.Range(0, boostPrefab.Length)], spawnPos, Quaternion.identity);
-            Vector2 directionToCenter = Vector2.zero - spawnPos;
+            /*Vector2 directionToCenter = Vector2.zero - spawnPos;
             Quaternion rotationToCenter = Quaternion.LookRotation(Vector3.forward, directionToCenter);
-            g.transform.rotation = rotationToCenter;
+            g.transform.rotation = rotationToCenter;*/
         }
     }
 }

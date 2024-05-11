@@ -8,16 +8,18 @@ public class BoostTowards : MonoBehaviour
     private Transform player;
     private PowerUps pwr;
     public string ptype = "hp";
+    private Vector3 dir;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         pwr = player.GetComponent<PowerUps>();
+        dir = Vector3.zero - transform.position;
     }
 
     void FixedUpdate()
     {
-        transform.position += transform.up * speed * Time.fixedDeltaTime;
+        transform.position += dir * speed * Time.fixedDeltaTime;
 
         if (Vector2.Distance(player.position, transform.position) < 0.5f)
         {

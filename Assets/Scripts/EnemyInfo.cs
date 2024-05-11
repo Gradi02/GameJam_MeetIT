@@ -20,8 +20,7 @@ public class EnemyInfo : MonoBehaviour
 
                     if (hp < 0)
                     {
-                        GetComponent<EnemyMovement>().RemoveFromList();
-                        Destroy(gameObject);
+                        Destroy(transform.root.gameObject);
                     }
                 }
             }

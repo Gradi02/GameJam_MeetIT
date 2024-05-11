@@ -28,6 +28,6 @@ public class EnemyMovement : MonoBehaviour
 
     public void RemoveFromList()
     {
-        player.GetComponent<EnemySpawner>().enemies.Remove(gameObject);
+        //player.GetComponent<EnemySpawner>().enemies.Remove(gameObject);
     }
 }

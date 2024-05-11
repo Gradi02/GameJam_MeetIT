@@ -12,8 +12,8 @@ public class EnemyRotateAround : MonoBehaviour
         Enemy.transform.localScale = new Vector3(0, 0, 0);
         int rotate = Random.Range(0, 360);
         this.gameObject.transform.Rotate(0, 0, +rotate);
-        LeanTween.scale(Enemy, new Vector3(1, 1, 1), 0.5f).setEase(LeanTweenType.easeInOutSine);
-        LeanTween.rotateAround(RotateAnchor, new Vector3(0, 0, 1), 360f, 10f).setLoopCount(-1);
+        LeanTween.scale(Enemy, new Vector3(3, 3, 3), 0.5f).setEase(LeanTweenType.easeInOutSine);
+        LeanTween.rotateAround(RotateAnchor, new Vector3(0, 0, 1), -360f, 10f).setLoopCount(-1);
         StartCoroutine(SpawnAround());
     }
 
@@ -25,4 +25,5 @@ public class EnemyRotateAround : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         Destroy(this);
     }
+
 }

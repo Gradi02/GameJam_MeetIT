@@ -1,18 +1,71 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    public void MenuStart()
+    public TextMeshProUGUI name;
+    public TextMeshProUGUI start;
+    public TextMeshProUGUI exit;
+    private bool First = true;
+    private bool Second = false;
+
+    private void Start()
     {
-        SceneManager.LoadScene("Gradi");
+        StartCoroutine(ChangeColors());
     }
 
-    public void MenuEnd() 
-    { 
-        Application.Quit();
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            First = false;
+            Second = true;
+        }
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            First = true;
+            Second = false;
+        }
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return))
+        {
+            if (First)
+            {
+                SceneManager.LoadScene("Gradi");
+            }
+            if (Second)
+            {
+                Application.Quit();
+            }
+        }
+
+        if (First) 
+        { 
+            start.color = new Color(0,255,255);
+            exit.color = new Color(255, 255, 255);
+        }
+        if (Second)
+        {
+            start.color = new Color(255, 255, 255);
+            exit.color = new Color(0, 255, 255);
+        }
+    }
+
+    public IEnumerator ChangeColors ()
+    {
+        while (true)
+        {
+            float i = Random.Range(0.1f, 0.8f);
+            yield return new WaitForSeconds(i);
+            name.gameObject.SetActive(false);
+            i = Random.Range(0.1f, 0.8f);
+            yield return new WaitForSeconds(i);
+            name.gameObject.SetActive(true);
+        }
     }
 }

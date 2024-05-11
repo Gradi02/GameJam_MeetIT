@@ -11,6 +11,7 @@ public class EnemySpawner : MonoBehaviour
     private float nextSpawnTime = 3;
     private bool[] stages = new bool[10];
     private int i = 0;
+    private bool ifKraken = true;
 
     public GameObject[] enemyPrefab;
     //public List<GameObject> enemies = new List<GameObject>();
@@ -63,5 +64,10 @@ public class EnemySpawner : MonoBehaviour
     {
         nextSpawnTime -= 0.2f;
         GetComponent<Rotation>().IncrsRot();
+        if(ifKraken)
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Kraken>().SpawnKraken();
+        }
+        ifKraken = !ifKraken;
     }
 }

@@ -19,7 +19,7 @@ public class EnemyInfo : MonoBehaviour
                 {
                     hp -= 50;
                     Destroy(collision.gameObject);
-                    FindObjectOfType<AudioManager>().Play("receive");
+                    //FindObjectOfType<AudioManager>().Play("receive");
 
 
                     if (hp < 0)

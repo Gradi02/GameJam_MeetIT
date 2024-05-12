@@ -103,7 +103,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 3859db5e6f69d124d96ef9c9c06cb6b1, type: 3}
     playonawake: 0
     loop: 0
-    volume: 0.5
+    volume: 0.4
     source: {fileID: 0}
   - name: pirat2
     clip: {fileID: 8300000, guid: e10a05006fd2c6d43b2539e03a2f5712, type: 3}
@@ -115,7 +115,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 981140f9c3dfd10489aa990042d1cd19, type: 3}
     playonawake: 0
     loop: 0
-    volume: 0.8
+    volume: 0.5
     source: {fileID: 0}
   - name: boss
     clip: {fileID: 8300000, guid: 24aa3a4d2978d2f4dadd209d36169591, type: 3}

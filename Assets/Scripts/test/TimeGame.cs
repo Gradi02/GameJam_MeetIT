@@ -4,10 +4,15 @@ using TMPro;
 public class TimeGame : MonoBehaviour
 {
     public TextMeshProUGUI timeText;
+    private float startTime = 0;
 
+    private void Awake()
+    {
+        startTime = Time.time;
+    }
     void FixedUpdate()
     {
-        float currentTime = Time.time;
+        float currentTime = Time.time - startTime;
         int minutes = Mathf.FloorToInt(currentTime / 60);
         int seconds = Mathf.FloorToInt(currentTime % 60);
 

@@ -25,6 +25,7 @@ public class GameOver : MonoBehaviour
         }
         clr.active = true;
         FindObjectOfType<AudioManager>().Stop("sound");
+        FindObjectOfType<AudioManager>().Stop("boss");
         FindObjectOfType<AudioManager>().Play("gameover");
         Time.timeScale = 0;
         img.SetActive(true);

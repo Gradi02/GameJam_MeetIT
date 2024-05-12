@@ -31,8 +31,8 @@ public class PiratGadaIJara : MonoBehaviour
     public IEnumerator SprawnPirate(bool one)
     {
         yield return new WaitForSeconds(0.5f);
-        Instantiate(pirat, piratSpawner.transform.position, Quaternion.identity, canvasRectTransform);
         Instantiate(one ? baner : baner2, banerSpawner.transform.position, Quaternion.identity, canvasRectTransform);
+        Instantiate(pirat, piratSpawner.transform.position, Quaternion.identity, canvasRectTransform);
         FindObjectOfType<AudioManager>().Play(one ? "pirat" : "pirat2");
     }
 }
